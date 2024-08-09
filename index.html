@@ -36,7 +36,7 @@
 		</script>
 		<script>
 
-		/*
+		
 		function randomNormal(min, max)
 		{
 			let rand = 0;
@@ -50,6 +50,7 @@
 			return min + (max - min) * Math.random();
 		}
 
+		/*
 		AFRAME.registerComponent('spawner', 
 		{
 			init: function()
@@ -403,6 +404,7 @@
 		function tenka() {
 			let ranNum = Math.floor(Math.random() * pNumber);
 			let ranWait = Math.random() * 2500;
+			/*
 			let col;
 			if (ranNum % 3 == 0) {
 				col = '#ff7d7d';
@@ -411,9 +413,10 @@
 			} else {
 				col = '#7dff7d'
 			}
+			*/
 
 			if (childs[ranNum] == true) {
-				hanabi(pipes[ranNum].getAttribute('position').x - 0.38*3, pipes[ranNum].getAttribute('position').y, pipes[ranNum].getAttribute('position').z, col);
+				//hanabi(pipes[ranNum].getAttribute('position').x - 0.38*3, pipes[ranNum].getAttribute('position').y, pipes[ranNum].getAttribute('position').z, col);
 				console.log( "Firework!" );
 
 				let x = pipes[ranNum].getAttribute('position').x - 0.38*3;
