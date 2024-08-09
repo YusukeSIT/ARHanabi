@@ -421,7 +421,7 @@
 				console.log( "Firework!" );
 
 				let x = pipes[ranNum].getAttribute('position').x - 0.38*3;
-				let y = pipes[ranNum].getAttribute('position').y + 0.2;
+				let y = pipes[ranNum].getAttribute('position').y + 0.3;
 				let z = pipes[ranNum].getAttribute('position').z;
 
 				let firework = document.createElement("a-entity");
@@ -429,7 +429,7 @@
 				firework.setAttribute("position", {"x":x, "y":y, "z":z} );
 
 				// random flight parameters
-				let maxHeight = randomNormal(12, 16);
+				let maxHeight = randomNormal(9, 12);
 				firework.setAttribute("firework", "maxHeight", maxHeight );
 				let riseTime = randomNormal(4, 5);
 				firework.setAttribute("firework", "riseTime", riseTime );
