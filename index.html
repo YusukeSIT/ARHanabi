@@ -172,7 +172,8 @@
 				this.particleBurst.setAttribute("spe-particles", "texture", "images/particles/sparkle.png");
 				this.particleBurst.setAttribute("spe-particles", "blending", "additive");
 				this.particleBurst.setAttribute("spe-particles", "distribution", "sphere");
-				this.particleBurst.setAttribute("spe-particles", "radius", 1);
+				this.particleBurst.setAttribute("spe-particles", "radius", 0.01);
+				this.particleBurst.setAttribute("spe-particles", "emitter-scale", 300);
 				
 				// particles both shrink and fade during last moments
 				this.particleBurst.setAttribute("spe-particles", "opacity", [1, 1, 1, 0]);
