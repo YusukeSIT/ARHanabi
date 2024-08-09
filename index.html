@@ -172,13 +172,13 @@
 				this.particleBurst.setAttribute("spe-particles", "texture", "images/particles/sparkle.png");
 				this.particleBurst.setAttribute("spe-particles", "blending", "additive");
 				this.particleBurst.setAttribute("spe-particles", "distribution", "sphere");
-				this.particleBurst.setAttribute("spe-particles", "radius", 0.1);
+				this.particleBurst.setAttribute("spe-particles", "radius", 0.06);
 				
 				// particles both shrink and fade during last moments
 				this.particleBurst.setAttribute("spe-particles", "opacity", [1, 1, 1, 0]);
-				this.particleBurst.setAttribute("spe-particles", "size", [12, 12, 12, 0]);
+				this.particleBurst.setAttribute("spe-particles", "size", [20, 20, 20, 0]);
 				
-				let particleCount = Math.floor( randomUniform(100, 999) );
+				let particleCount = Math.floor( randomUniform(500, 1500) );
 				this.particleBurst.setAttribute("spe-particles", "particleCount", particleCount);
 
 				// change of particle burst vs. particle stream
