@@ -176,9 +176,9 @@
 				
 				// particles both shrink and fade during last moments
 				this.particleBurst.setAttribute("spe-particles", "opacity", [1, 1, 1, 0]);
-				this.particleBurst.setAttribute("spe-particles", "size", [20, 20, 20, 0]);
+				this.particleBurst.setAttribute("spe-particles", "size", [18, 18, 18, 0]);
 				
-				let particleCount = Math.floor( randomUniform(500, 1500) );
+				let particleCount = Math.floor( randomUniform(500, 1100) );
 				this.particleBurst.setAttribute("spe-particles", "particleCount", particleCount);
 
 				// change of particle burst vs. particle stream
@@ -404,7 +404,7 @@
 
 		function tenka() {
 			let ranNum = Math.floor(Math.random() * pNumber);
-			let ranWait = Math.random() * 2500;
+			let ranWait = Math.random() * 2500 + 500;
 			/*
 			let col;
 			if (ranNum % 3 == 0) {
@@ -421,7 +421,7 @@
 				console.log( "Firework!" );
 
 				let x = pipes[ranNum].getAttribute('position').x - 0.38*3;
-				let y = pipes[ranNum].getAttribute('position').y + 0.3;
+				let y = pipes[ranNum].getAttribute('position').y + 0.6;
 				let z = pipes[ranNum].getAttribute('position').z;
 
 				let firework = document.createElement("a-entity");
@@ -429,7 +429,7 @@
 				firework.setAttribute("position", {"x":x, "y":y, "z":z} );
 
 				// random flight parameters
-				let maxHeight = randomNormal(9, 12);
+				let maxHeight = randomNormal(16, 20);
 				firework.setAttribute("firework", "maxHeight", maxHeight );
 				let riseTime = randomNormal(4, 5);
 				firework.setAttribute("firework", "riseTime", riseTime );
