@@ -69,7 +69,7 @@
 				<img src="./data/sprite.png" id="particleTex">
 			</a-assets>
 
-			<a-entity position="0 1 -5" trigger particleplayer="on: particleplayerstart; src: #particlesJson; img: #particleTex; dur: 4000; count: 75%; scale: 0.6; pscale: 2; interpolate: true; shader: standard; poolSize: 20"></a-entity>
+			<a-entity position="0 1 -5" trigger particleplayer="on: particleplayerstart; src: #particlesJson; img: #particleTex; dur: 4000; count: 75%; scale: 0.6; pscale: 2; interpolate: true; shader: standard; poolSize: 20; color:#f00"></a-entity>
 					
 		</a-scene>
 
@@ -144,7 +144,7 @@
 				let x = pipes[ranNum].getAttribute('position').x - 0.38*3;
 				let y = pipes[ranNum].getAttribute('position').y + 14.6;
 				let z = pipes[ranNum].getAttribute('position').z + 0.4;
-				
+
 			    this.el.emit('particleplayerstart', {
 			      position: new THREE.Vector3(
 			        x,
@@ -152,7 +152,6 @@
 			        z
 			      ),
 			      //rotation: new THREE.Euler(Math.random() * 1 - .5, 0, 0)
-			      color: #f00
 			    });
 
 				setTimeout(() => {this.trigger()}, ranWait);
