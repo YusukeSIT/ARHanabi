@@ -144,8 +144,7 @@
 				let x = pipes[ranNum].getAttribute('position').x - 0.38*3;
 				let y = pipes[ranNum].getAttribute('position').y + 14.6;
 				let z = pipes[ranNum].getAttribute('position').z + 0.4;
-				console.log("x:" + x + ", y:" + y + ", z:" + z);
-
+				
 			    this.el.emit('particleplayerstart', {
 			      position: new THREE.Vector3(
 			        x,
@@ -153,7 +152,7 @@
 			        z
 			      ),
 			      //rotation: new THREE.Euler(Math.random() * 1 - .5, 0, 0)
-			      color: '#f00'
+			      color: #f00
 			    });
 
 				setTimeout(() => {this.trigger()}, ranWait);
