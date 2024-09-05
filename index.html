@@ -69,7 +69,7 @@
 				<img src="./data/sprite.png" id="particleTex">
 			</a-assets>
 
-			<a-entity position="0 1 -5" trigger particleplayer="on: particleplayerstart; src: #particlesJson; img: #particleTex; dur: 4000; count: 50%; scale: 0.6; pscale: 2; interpolate: true; shader: standard; poolSize: 20"></a-entity>
+			<a-entity position="0 1 -5" trigger particleplayer="on: particleplayerstart; src: #particlesJson; img: #particleTex; dur: 4000; count: 75%; scale: 0.3; pscale: 1; interpolate: true; shader: standard; poolSize: 20"></a-entity>
 					
 		</a-scene>
 
@@ -137,13 +137,19 @@
 			    });
 		  	},
 
+		  	tick: function() {
+				let x = pipes[ranNum].getAttribute('position').x - 0.38*3;
+				let y = pipes[ranNum].getAttribute('position').y + 14.6;
+				let z = pipes[ranNum].getAttribute('position').z;
+		  	},
+
 		 	trigger: function() {
 
 				let ranNum = Math.floor(Math.random() * pNumber);
 				let ranWait = Math.random() * 2500;
-				let x = pipes[ranNum].getAttribute('position').x - 0.38*3;
-				let y = pipes[ranNum].getAttribute('position').y + 0.6;
-				let z = pipes[ranNum].getAttribute('position').z;
+				x = pipes[ranNum].getAttribute('position').x - 0.38*3;
+				y = pipes[ranNum].getAttribute('position').y + 14.6;
+				z = pipes[ranNum].getAttribute('position').z;
 
 			    this.el.emit('particleplayerstart', {
 			      position: new THREE.Vector3(
