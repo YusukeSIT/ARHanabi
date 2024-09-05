@@ -137,19 +137,14 @@
 			    });
 		  	},
 
-		  	tick: function() {
-				let x = pipes[ranNum].getAttribute('position').x - 0.38*3;
-				let y = pipes[ranNum].getAttribute('position').y + 14.6;
-				let z = pipes[ranNum].getAttribute('position').z;
-		  	},
-
 		 	trigger: function() {
 
 				let ranNum = Math.floor(Math.random() * pNumber);
-				let ranWait = Math.random() * 2500;
-				x = pipes[ranNum].getAttribute('position').x - 0.38*3;
-				y = pipes[ranNum].getAttribute('position').y + 14.6;
-				z = pipes[ranNum].getAttribute('position').z;
+				let ranWait = Math.random() * 1500;
+				let x = pipes[ranNum].getAttribute('position').x - 0.38*3;
+				let y = pipes[ranNum].getAttribute('position').y + 14.6;
+				let z = pipes[ranNum].getAttribute('position').z;
+				console.log("x:" + x + ", y:" + y + ", z:" + z);
 
 			    this.el.emit('particleplayerstart', {
 			      position: new THREE.Vector3(
