@@ -61,7 +61,7 @@
 			<a-entity cursor="rayOrigin: mouse" raycaster="objects: #target;"></a-entity> 
 
 			<!--rayの衝突用-->
-			<a-plane cursor-listener id="target" rotation = "-90 0 0" position="0 0 0" scale="500 500 1" opacity = "0"></a-plane>
+			<a-plane cursor-listener id="target" rotation = "-90 0 0" position="0 -0.5 0" scale="500 500 1" opacity = "0"></a-plane>
 
 			<!--花火アニメーション読み込み-->
 			<a-assets>
@@ -142,7 +142,7 @@
 				let ranNum = Math.floor(Math.random() * pNumber);
 				let ranWait = Math.random() * 1500;
 				let x = pipes[ranNum].getAttribute('position').x - 0.38*3;
-				let y = pipes[ranNum].getAttribute('position').y + 14.6;
+				let y = pipes[ranNum].getAttribute('position').y + 4.6;
 				let z = pipes[ranNum].getAttribute('position').z;
 				console.log("x:" + x + ", y:" + y + ", z:" + z);
 
